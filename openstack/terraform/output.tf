@@ -23,10 +23,6 @@ output "ibm_cloud_private_proxy_hostname" {
   value = "${element(keys(var.singlenode_hostname_ip),0)}.${var.vm_domain}"
 }
 
-output "ibm_cloud_private_custer_ca_domain" {
-	value = "${var.icp_cluster_name}.${var.vm_domain}"
-}
-
 output "cloud_connection_name"{
 	value = "${var.icp_cluster_name}${random_id.clusterid.hex}Connection" 
 }
